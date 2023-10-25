@@ -1,0 +1,155 @@
+.accounts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.accounts-table thead th {
+    background-color: #37474F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px 10px;
+    border: 1px solid #546E7A;
+    font-weight: bold;
+}
+
+.accounts-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.accounts-table tbody tr:nth-child(odd) {
+    background-color: #ECEFF1;
+}
+
+.accounts-table tbody tr:nth-child(even) {
+    background-color: #FFFFFF;
+}
+
+.accounts-table td {
+    padding: 15px 10px;
+    border: 1px solid #B0BEC5;
+    text-align: center;
+}
+
+.accounts-table thead th:first-child,
+.accounts-table tbody tr td:first-child {
+    padding-left: 20px;
+}
+
+.accounts-table thead th:last-child,
+.accounts-table tbody tr td:last-child {
+    padding-right: 20px;
+}
+
+.accounts-table tbody tr:hover {
+    background-color: #CFD8DC;
+}
+
+.edit-button,
+.save-button,
+delete-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+.edit-button:hover,
+save-button:hover,
+delete-button:hover {
+    background-color: rgba(75, 82, 84, 0.16);
+    box-shadow: 0 0 10px rgba(176, 190, 197, 0.58);
+}
+
+.page-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-button {
+    background-color: #b0bec5;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+page-button:hover {
+    background-color: #37474f;
+}
+
+page-button.current-page {
+    background-color: #37474f;
+}
+
+.editable {
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+editable.edit-mode {
+    border-color: #33cc33;
+}
+
+editable.edit-name:focus,
+editable.edit-title:focus {
+    border: 2px solid white;
+    background-color: white;
+    color: #333;
+}
+
+.new-account-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.new-account-block + .new-account-block {
+    margin-top: 5px;
+}
+
+new-account-block select,
+new-account-block input[type="text"],
+new-account-block input[type="number"],
+new-account-block input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+createAccountButton {
+    padding: 10px 20px;
+    background-color: #37474f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+createAccountButton:hover {
+    background-color: #546E7A;
+}
+
+new-account-form {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    margin: 20px auto;
+}

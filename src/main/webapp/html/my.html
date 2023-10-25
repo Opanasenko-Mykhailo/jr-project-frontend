@@ -1,12 +1,79 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>RPG</title>
-    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer type="text/javascript" src="/html/script.js"></script>
     <link href="/css/my.css" rel="stylesheet">
 </head>
 <body>
-<h1>RPG admin panel</h1>
-<h2>Accounts list:</h2>
-
+<h1>RPG Admin Panel</h1>
+<h2>Accounts List:</h2>
+<div class="items-per-page">
+    <label for="itemsPerPage">Items per page:</label>
+    <select id="itemsPerPage">
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+</div>
+<table class="accounts-table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Race</th>
+        <th>Profession</th>
+        <th>Level</th>
+        <th>Birthday</th>
+        <th>Banned</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody class="accounts-table-body">
+    <!-- Dynamically generated table will be here -->
+    </tbody>
+</table>
+<div id="pagination" class="page-buttons">
+    <!-- Pagination buttons will be here -->
+</div>
+<hr class="horizontal-line">
+<div class="new-account-form">
+    <h2>Create new account</h2>
+    <div class="new-account-block">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" minlength="1" maxlength="12" required>
+    </div>
+    <div class="new-account-block">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" minlength="1" maxlength="30" required>
+    </div>
+    <div class="new-account-block">
+        <label for="race">Race:</label>
+        <select id="race" name="race"></select>
+    </div>
+    <div class="new-account-block">
+        <label for="profession">Profession:</label>
+        <select id="profession" name="profession"></select>
+    </div>
+    <div class="new-account-block">
+        <label for="level">Level:</label>
+        <input type="number" id="level" name="level" min="0" max="100" required>
+    </div>
+    <div class="new-account-block">
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" required>
+    </div>
+    <div class="new-account-block">
+        <label for="banned">Banned:</label>
+        <select id="banned" name="banned"></select>
+    </div>
+    <div class="new-account-block">
+        <button id="createAccountButton">Create</button>
+    </div>
+</div>
 </body>
 </html>
